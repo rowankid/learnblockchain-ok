@@ -6,7 +6,7 @@
       "contentHash": "54c28c84e5277b35b8c8329ce9755dae",
       "sourceName": "contracts/Greeter.sol",
       "solcConfig": {
-        "version": "0.8.9",
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -43,7 +43,7 @@
       "contentHash": "cc4777addd464ea56fa35b1c45df0591",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
-        "version": "0.8.9",
+        "version": "0.8.4",
         "settings": {
           "optimizer": {
             "enabled": false,
@@ -71,6 +71,41 @@
       ],
       "artifacts": [
         "console"
+      ]
+    },
+    "/Users/luowenqi/Documents/git/learnblockchain-ok/w1/w1-1-hardhat-demo/contracts/Counter.sol": {
+      "lastModificationDate": 1646105030438,
+      "contentHash": "5831f38d607ce06e0b7bfb43ea7c0bfe",
+      "sourceName": "contracts/Counter.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "Counter"
       ]
     }
   }
