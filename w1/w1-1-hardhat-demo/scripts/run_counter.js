@@ -22,3 +22,5 @@ describe("Counter", function () {
     expect(await counter.counter()).to.equal(31);
   });
 });
+
+// npx hardhat run scripts/run_counter.js [ —-network 网络]
