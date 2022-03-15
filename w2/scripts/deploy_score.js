@@ -10,14 +10,23 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Counter = await hre.ethers.getContractFactory("Counter");
-  const counter = await Counter.deploy(20);
-  await counter.deployed();
-  console.log("Counter deployed to:", counter.address);
+  const Score = await hre.ethers.getContractFactory("Score");
+  const score = await Score.deploy(20);
+  await score.deployed();
+  console.log("Score deployed to:", score.address);
 
 
-  let Artifact = await artifacts.readArtifact("Counter");
-  await writeAbiaddr(Artifact,counter.address,"Counter",network.name);
+  let Artifact = await artifacts.readArtifact("Score");
+  await writeAbiaddr(Artifact,score.address,"Score",network.name);
+  
+  const Teacher = await hre.ethers.getContractFactory("Teacher");
+  const teacher = await Teacher.deploy(20);
+  await teacher.deployed();
+  console.log("Teacher deployed to:", teacher.address);
+
+
+  let Artifact = await artifacts.readArtifact("Teacher");
+  await writeAbiaddr(Artifact,teacher.address,"Teacher",network.name);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
