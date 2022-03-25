@@ -10,14 +10,15 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Counter = await hre.ethers.getContractFactory("Counter");
-  const counter = await Counter.deploy(20);
-  await counter.deployed();
-  console.log("Counter deployed to:", counter.address);
+  const ERC2612 = await hre.ethers.getContractFactory("ERC2612");
+  const erc2612 = await ERC2612.deploy(20);
+  await erc2612.deployed();
+  console.log("ERC2612 deployed to:", erc2612.address);
 
 
-  let Artifact = await artifacts.readArtifact("Counter");
-  await writeAbiaddr(Artifact,counter.address,"Counter",network.name);
+  let Artifact = await artifacts.readArtifact("ERC2612");
+  await writeAbiaddr(Artifact,erc2612.address,"ERC2612",network.name);
+  
 }
 
 // We recommend this pattern to be able to use async/await everywhere
